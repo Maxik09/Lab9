@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Password Verification</title>
+    <h1>EECS 348 Lab Seven Practice three</h1>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2; 
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        .input-group {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="password1">First Password:</label>
+    <input type="password" id="password1"><br>
+    <label for="password2">Second Password:</label>
+    <input type="password" id="password2"><br>
+    <button onclick="verifyPasswords()">Verify Passwords</button>
+
+    <script>
+        function verifyPasswords() {
+            const password1 = document.getElementById("password1").value;
+            const password2 = document.getElementById("password2").value;
+
+            if (password1.length < 8) {
+                alert("Password must be at least 8 characters long.");
+            } else if (password1 !== password2) {
+                alert("Passwords do not match.");
+            } else {
+                alert("Passwords are matched!");
+            }
+        }
+    </script>
+</body>
+
+</html>
